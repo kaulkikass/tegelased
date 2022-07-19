@@ -16,6 +16,7 @@ function Tegelased() {
 
     const valiTegelane = (tegelane) => {
         valitudTegelased.push(tegelane);
+        muudaValitudTegelased(valitudTegelased.slice());
         console.log(valitudTegelased);
     }
     const eemaldaValitudTegelastest = (index) => {
