@@ -1,15 +1,10 @@
 import { useState } from "react";
 
 function Tegelased() {
+    const tegelased = JSON.parse(localStorage.getItem("tegelased")) || []; 
     const [valitudTegelased, muudaValitudTegelased] = useState([]);
     const [tegelane, n2itaTegelast] = useState('');
-    const tegelased = [
-        {eesnimi: 'Mickey', perenimi: 'Mouse', elukoht: 'Disneyland', vanus: '22'},
-        {eesnimi: 'Minnie', perenimi: 'Mouse', elukoht: 'Disneyland', vanus: '33'},
-        {eesnimi: 'Winnie', perenimi: 'Pooh', elukoht: 'Hundred Acre Wood', vanus: '44'},
-        {eesnimi: 'Roo', perenimi: 'Kangaroo', elukoht: 'Hundred Acre Wood', vanus: '55'},
-        {eesnimi: 'Scooby', perenimi: 'Doo', elukoht: 'Crystal Cove', vanus:'66'}
-    ];
+    
     const kuvaNimi = (tegelane) => {
         console.log(tegelane.eesnimi);
     }
